@@ -10,7 +10,7 @@ export class AuthController {
     return this.authService.login(body.username, body.password);
   }
   @Post('is_login')
-  isLogin(@Body() jwt: string) {
-    return this.authService.isLogin(jwt);
+  isLogin(@Body() body: {jwt: string}) {
+    return this.authService.isLogin(body.jwt);
   }
 }
