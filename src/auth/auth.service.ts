@@ -7,6 +7,7 @@ export class AuthService {
     if (username === 'admin' && password === '123456') {
       return {
         message: 'Успешный вход',
+        success: true,
         user: {
           username, 
           role: 'admin',
