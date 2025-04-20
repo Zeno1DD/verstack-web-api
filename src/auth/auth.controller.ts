@@ -9,4 +9,8 @@ export class AuthController {
   login(@Body() body: {username : string; password: string}) {
     return this.authService.login(body.username, body.password);
   }
+  @Post('is_login')
+  isLogin(@Body() jwt: string) {
+    return this.authService.isLogin(jwt);
+  }
 }
